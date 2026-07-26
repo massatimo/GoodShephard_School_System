@@ -32,30 +32,63 @@ function sidebarActive(string $page, string $currentPage): string
             <span>Dashboard</span>
         </a>
 
-        <a href="#" class="sidebar-link">
-            <i class="bi bi-people-fill"></i>
-            <span>Pupils</span>
-        </a>
+        <a
+    href="../pupils/index.php"
+    class="sidebar-link <?= sidebarActive('index.php', $currentPage) ?>"
+>
+    <i class="bi bi-people-fill"></i>
+    <span>Pupils</span>
+</a>
+    <a
+    href="../staff/index.php"
+    class="sidebar-link"
+>
+    <i class="bi bi-person-badge-fill"></i>
+    <span>Staff Management</span>
+</a>
 
-        <a href="#" class="sidebar-link">
-            <i class="bi bi-person-badge-fill"></i>
-            <span>Staff</span>
-        </a>
 
         <a href="#" class="sidebar-link">
             <i class="bi bi-building-fill"></i>
             <span>Classes & Streams</span>
         </a>
+        <a
+    href="../academic/index.php"
+    class="sidebar-link"
+>
+    <i class="bi bi-journal-bookmark-fill"></i>
+    <span>Academic Structure</span>
+</a>
+<a
+    href="../teacher-allocations/index.php"
+    class="sidebar-link"
+>
+    <i class="bi bi-person-video3"></i>
+    <span>Teacher Allocation</span>
+</a>
 
-        <a href="#" class="sidebar-link">
-            <i class="bi bi-calendar-check-fill"></i>
-            <span>Attendance</span>
-        </a>
+        <a
+    href="../attendance/index.php"
+    class="sidebar-link"
+>
+    <i class="bi bi-calendar-check-fill"></i>
+    <span>Attendance</span>
+</a>
+<a
+    href="../attendance/reports.php"
+    class="sidebar-link"
+>
+    <i class="bi bi-bar-chart-line-fill"></i>
+    <span>Attendance Reports</span>
+</a>
 
-        <a href="#" class="sidebar-link">
-            <i class="bi bi-journal-check"></i>
-            <span>Examinations</span>
-        </a>
+        <a
+    href="../examinations/index.php"
+    class="sidebar-link"
+>
+    <i class="bi bi-clipboard-data-fill"></i>
+    <span>Examinations</span>
+</a>
 
         <div class="sidebar-section-label">
             FINANCE
