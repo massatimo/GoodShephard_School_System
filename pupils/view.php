@@ -237,6 +237,14 @@ if (!empty($pupil['photo'])) {
                     <i class="bi bi-arrow-left me-2"></i>
                     Back
                 </a>
+                <a
+                    href="print.php?id=<?= (int) $pupil['id'] ?>"
+                    target="_blank"
+                    class="btn school-primary-btn module-action-button"
+                >
+                    <i class="bi bi-printer-fill me-2"></i>
+                    Print Profile
+                </a>
 
                 <a
                     href="edit.php?id=<?= (int) $pupil['id'] ?>"
@@ -1034,14 +1042,7 @@ if (!empty($pupil['photo'])) {
                     Edit
                 </a>
 
-                <a
-                    href="print.php?id=<?= (int) $pupil['id'] ?>"
-                    target="_blank"
-                    class="btn school-primary-btn module-action-button"
-                >
-                    <i class="bi bi-printer-fill me-2"></i>
-                    Print Profile
-                </a>
+                
 
             </div>
 

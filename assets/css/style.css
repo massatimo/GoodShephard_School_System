@@ -44,6 +44,7 @@ a {
 .modern-login-page {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 18px;
   display: flex;
   align-items: center;
@@ -63,8 +64,8 @@ a {
 
 .modern-login-layout {
   width: min(1450px, 96vw);
-  height: min(850px, calc(100vh - 36px));
-  min-height: 620px;
+  height: min(850px, calc(100dvh - 36px));
+  min-height: 0;
   display: grid;
   grid-template-columns: 54% 46%;
   overflow: hidden;
@@ -222,7 +223,7 @@ a {
 /* RIGHT SIDE */
 
 .login-form-area {
-  height: 110%;
+  height: 100%;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -503,8 +504,14 @@ a {
 }
 
 @media (max-width: 900px) {
+  .modern-login-page {
+    align-items: flex-start;
+  }
+
   .modern-login-layout {
+    height: auto;
     display: block;
+    overflow: visible;
   }
 
   .login-school-visual {
@@ -512,7 +519,8 @@ a {
   }
 
   .login-form-area {
-    min-height: 100vh;
+    height: auto;
+    min-height: auto;
     padding: 32px 20px;
     background:
       linear-gradient(
@@ -565,6 +573,100 @@ a {
     align-items: flex-start;
     flex-direction: column;
     gap: 12px;
+  }
+}
+
+@media (max-height: 900px) and (min-width: 901px) {
+  .login-form-area {
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+
+  .login-card-modern {
+    padding-top: clamp(16px, 2vh, 24px);
+    padding-bottom: clamp(16px, 2vh, 24px);
+  }
+
+  .login-school-identity {
+    margin-bottom: 20px;
+  }
+
+  .login-logo-wrapper {
+    width: clamp(68px, 10vh, 88px);
+    height: clamp(68px, 10vh, 88px);
+    margin-bottom: 8px;
+  }
+
+  .login-school-identity h2 {
+    font-size: clamp(1.55rem, 3.2vh, 2.1rem);
+  }
+
+  .login-school-identity h3 {
+    margin-top: 3px;
+    font-size: clamp(1.1rem, 2.4vh, 1.55rem);
+  }
+
+  .identity-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .login-field-group {
+    margin-bottom: 14px;
+  }
+
+  .login-field-group label {
+    margin-bottom: 6px;
+  }
+
+  .modern-input-wrapper {
+    min-height: 52px;
+  }
+
+  .login-options {
+    margin-bottom: 18px;
+  }
+
+  .modern-signin-button {
+    min-height: 50px;
+  }
+
+  .login-divider {
+    margin-top: 18px;
+    margin-bottom: 12px;
+  }
+
+  .modern-login-footer {
+    margin-top: 12px;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 901px) {
+  .login-school-identity {
+    margin-bottom: 12px;
+  }
+
+  .login-logo-wrapper {
+    width: 58px;
+    height: 58px;
+  }
+
+  .login-school-identity p,
+  .login-divider,
+  .secure-login-message {
+    display: none;
+  }
+
+  .login-field-group {
+    margin-bottom: 10px;
+  }
+
+  .login-options {
+    margin-bottom: 12px;
+  }
+
+  .modern-login-footer {
+    margin-top: 8px;
   }
 }
 
@@ -1223,14 +1325,14 @@ a {
   }
 
   .modern-login-layout {
-    min-height: 700px;
+    min-height: 0;
     grid-template-columns: 44% 56%;
   }
 
   .login-school-visual,
   .school-visual-content,
   .login-form-area {
-    min-height: 700px;
+    min-height: 0;
   }
 
   .school-visual-content {
@@ -1245,8 +1347,10 @@ a {
 
   .modern-login-layout {
     max-width: 650px;
+    height: auto;
     min-height: auto;
     display: block;
+    overflow: visible;
   }
 
   .login-school-visual {
@@ -1254,6 +1358,7 @@ a {
   }
 
   .login-form-area {
+    height: auto;
     min-height: auto;
     padding: 30px 25px;
   }
@@ -1280,6 +1385,95 @@ a {
   .login-logo-wrapper {
     width: 88px;
     height: 88px;
+  }
+}
+
+/* Keep the complete login form inside tablet and phone viewports. */
+@media (max-width: 900px) {
+  .modern-login-page {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .modern-login-layout {
+    height: calc(100dvh - 20px);
+    overflow: hidden;
+  }
+
+  .login-form-area {
+    height: 100%;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  .login-card-modern {
+    padding: clamp(14px, 2.5vh, 24px) clamp(18px, 5vw, 30px);
+  }
+
+  .login-school-identity {
+    margin-bottom: clamp(12px, 2.5vh, 22px);
+  }
+
+  .login-logo-wrapper {
+    width: clamp(58px, 11vh, 82px);
+    height: clamp(58px, 11vh, 82px);
+    margin-bottom: 6px;
+  }
+
+  .identity-line {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+  .login-field-group {
+    margin-bottom: clamp(9px, 2vh, 16px);
+  }
+
+  .login-field-group label {
+    margin-bottom: 5px;
+  }
+
+  .modern-input-wrapper {
+    min-height: clamp(46px, 7vh, 54px);
+  }
+
+  .login-options {
+    margin-bottom: clamp(12px, 2.5vh, 20px);
+  }
+
+  .modern-signin-button {
+    min-height: clamp(46px, 7vh, 52px);
+  }
+
+  .login-divider {
+    margin-top: clamp(12px, 2.5vh, 20px);
+    margin-bottom: 10px;
+  }
+
+  .modern-login-footer {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-options {
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .remember-option,
+  .forgot-password-link {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-height: 620px) and (max-width: 900px) {
+  .login-school-identity p,
+  .login-divider,
+  .secure-login-message,
+  .modern-login-footer {
+    display: none;
   }
 }
 
