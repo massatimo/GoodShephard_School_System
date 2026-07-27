@@ -191,10 +191,56 @@ if ($errors !== []) {
     header('Location: create.php');
     exit;
 }
+/*
+|--------------------------------------------------------------------------
+| Generate Admission Number
+|--------------------------------------------------------------------------
+*/
+
+$currentYear = date('y');
+
+$schoolInitials = 'GS';
+
+$classStatement = $pdo->prepare("
+SELECT class_name
+FROM classes
+WHERE id=?
+");
+
+$classStatement->execute([$classId]);
+
+$class = $classStatement->fetch();
+
+$classCode = strtoupper($class['class_name']);
+
+/*
+Count pupils already admitted
+*/
+
+$countStatement = $pdo->prepare("
+SELECT COUNT(*) + 1
+
+FROM pupils
+
+WHERE class_id = ?
+AND YEAR(created_at)=YEAR(CURDATE())
+");
+
+$countStatement->execute([$classId]);
+
+$nextNumber = $countStatement->fetchColumn();
+
+$sequence = str_pad($nextNumber,3,'0',STR_PAD_LEFT);
+
+$admissionNumber =
+$currentYear.'/'
+.$schoolInitials.'/'
+.$classCode.'/'
+.$sequence;
 
 $sql = '
     INSERT INTO pupils (
-        admission_number,
+        $admissionNumber,
         emis_number,
         lin_number,
         first_name,

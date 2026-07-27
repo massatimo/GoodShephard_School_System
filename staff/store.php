@@ -148,10 +148,20 @@ $fullName = trim(
     ($input['middle_name'] ?? '') . ' ' .
     $input['last_name']
 );
+$school='GS';
+
+$count=$pdo->query("
+SELECT COUNT(*)+1
+FROM staff
+")->fetchColumn();
+
+$staffNumber=
+$school.'/S/'.
+str_pad($count,3,'0',STR_PAD_LEFT);
 
 $sql = '
     INSERT INTO staff (
-        staff_number,
+       $staffNumber,
         first_name,
         middle_name,
         last_name,

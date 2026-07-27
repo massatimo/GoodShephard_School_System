@@ -134,23 +134,7 @@ unset($_SESSION['form_errors'], $_SESSION['old_input']);
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-md-4">
-                        <label class="form-label">
-                            Admission number *
-                        </label>
-
-                        <input
-                            type="text"
-                            name="admission_number"
-                            class="form-control professional-input"
-                            value="<?= htmlspecialchars(
-                                $old['admission_number'] ?? ''
-                            ) ?>"
-                            placeholder="Example: GS-P4-001"
-                            required
-                        >
-                    </div>
-
+                   
                     <div class="col-md-4">
                         <label class="form-label">
                             EMIS number
