@@ -33,7 +33,6 @@ $input = array_map(
 $errors = [];
 
 $requiredFields = [
-    'admission_number' => 'Admission number',
     'admission_date' => 'Admission date',
     'admission_type' => 'Admission type',
     'class_id' => 'Class',
@@ -74,27 +73,13 @@ if (
     $errors[] = 'Select a valid orphan status.';
 }
 
-$checkAdmission = $pdo->prepare(
-    'SELECT id
-     FROM pupils
-     WHERE admission_number = :admission_number
-     LIMIT 1'
-);
-
-$checkAdmission->execute([
-    'admission_number' => $input['admission_number'] ?? '',
-]);
-
-if ($checkAdmission->fetch()) {
-    $errors[] = 'That admission number is already registered.';
-}
-
 $className = null;
+$classCode = null;
 $streamName = null;
 
 if (($input['class_id'] ?? '') !== '') {
     $classStatement = $pdo->prepare(
-        "SELECT class_name
+        "SELECT class_name, class_code
          FROM classes
          WHERE id = :class_id
            AND status = 'Active'
@@ -105,11 +90,13 @@ if (($input['class_id'] ?? '') !== '') {
         'class_id' => (int) $input['class_id'],
     ]);
 
-    $className = $classStatement->fetchColumn();
+    $class = $classStatement->fetch();
 
-    if ($className === false) {
-        $className = null;
+    if ($class === false) {
         $errors[] = 'Select a valid class.';
+    } else {
+        $className = $class['class_name'];
+        $classCode = $class['class_code'];
     }
 }
 
@@ -191,56 +178,42 @@ if ($errors !== []) {
     header('Location: create.php');
     exit;
 }
-/*
-|--------------------------------------------------------------------------
-| Generate Admission Number
-|--------------------------------------------------------------------------
-*/
+$admissionPrefix = sprintf(
+    '%s/GS/%s/',
+    date('y'),
+    strtoupper((string) $classCode)
+);
 
-$currentYear = date('y');
+$sequenceStatement = $pdo->prepare(
+    "SELECT COALESCE(
+        MAX(
+            CAST(
+                SUBSTRING_INDEX(admission_number, '/', -1)
+                AS UNSIGNED
+            )
+        ),
+        0
+     ) + 1
+     FROM pupils
+     WHERE class_id = :class_id
+       AND admission_number LIKE :admission_prefix"
+);
 
-$schoolInitials = 'GS';
+$sequenceStatement->execute([
+    'class_id' => (int) $input['class_id'],
+    'admission_prefix' => $admissionPrefix . '%',
+]);
 
-$classStatement = $pdo->prepare("
-SELECT class_name
-FROM classes
-WHERE id=?
-");
-
-$classStatement->execute([$classId]);
-
-$class = $classStatement->fetch();
-
-$classCode = strtoupper($class['class_name']);
-
-/*
-Count pupils already admitted
-*/
-
-$countStatement = $pdo->prepare("
-SELECT COUNT(*) + 1
-
-FROM pupils
-
-WHERE class_id = ?
-AND YEAR(created_at)=YEAR(CURDATE())
-");
-
-$countStatement->execute([$classId]);
-
-$nextNumber = $countStatement->fetchColumn();
-
-$sequence = str_pad($nextNumber,3,'0',STR_PAD_LEFT);
-
-$admissionNumber =
-$currentYear.'/'
-.$schoolInitials.'/'
-.$classCode.'/'
-.$sequence;
+$admissionNumber = $admissionPrefix . str_pad(
+    (string) $sequenceStatement->fetchColumn(),
+    3,
+    '0',
+    STR_PAD_LEFT
+);
 
 $sql = '
     INSERT INTO pupils (
-        $admissionNumber,
+        admission_number,
         emis_number,
         lin_number,
         first_name,
@@ -335,7 +308,7 @@ $sql = '
 $statement = $pdo->prepare($sql);
 
 $statement->execute([
-    'admission_number' => $input['admission_number'],
+    'admission_number' => $admissionNumber,
     'emis_number' => $input['emis_number'] ?: null,
     'lin_number' => $input['lin_number'] ?: null,
     'first_name' => $input['first_name'],

@@ -134,7 +134,23 @@ unset($_SESSION['form_errors'], $_SESSION['old_input']);
                 </div>
 
                 <div class="row g-4">
-                   
+                    <div class="col-md-4">
+                        <label class="form-label">
+                            Admission number
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control professional-input"
+                            value="Generated automatically"
+                            readonly
+                        >
+
+                        <div class="form-text">
+                            Assigned when the pupil is registered.
+                        </div>
+                    </div>
+
                     <div class="col-md-4">
                         <label class="form-label">
                             EMIS number
