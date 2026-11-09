@@ -148,7 +148,7 @@ $fullName = trim(
     ($input['middle_name'] ?? '') . ' ' .
     $input['last_name']
 );
-$school='GS';
+$school='RKPS';
 
 $count=$pdo->query("
 SELECT COUNT(*)+1

@@ -120,7 +120,7 @@ foreach ($attendanceRecords as $record) {
     >
 
     <title>
-        Attendance Register | Good Shepherd Primary School
+        Attendance Register | Royal Kindergarten and Primary School
     </title>
 
     <link

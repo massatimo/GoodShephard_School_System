@@ -190,7 +190,7 @@ function examViewStatusClass(string $status): string
         <?= htmlspecialchars(
             $examination['examination_name']
         ) ?>
-        | Good Shepherd Primary School
+        | Royal Kindergarten and Primary School
     </title>
 
     <link
@@ -272,6 +272,20 @@ function examViewStatusClass(string $status): string
                     <i class="bi bi-arrow-left me-2"></i>
                     Back
                 </a>
+                <a
+    href="results.php?examination_id=<?= (int) $examination['id'] ?>"
+    class="btn btn-outline-success"
+>
+    <i class="bi bi-bar-chart-fill me-2"></i>
+    View Results
+</a>
+<a
+    href="subject-analysis.php?examination_id=<?= (int) $examination['id'] ?>"
+    class="btn btn-outline-primary"
+>
+    <i class="bi bi-pie-chart-fill me-2"></i>
+    Subject Analysis
+</a>
 
                 <a
                     href="setup-class.php?examination_id=<?= (int) $examination['id'] ?>"

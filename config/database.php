@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $databaseHost = '127.0.0.1';
-$databasePort = '3306';
+$databasePort = '3307';
 $databaseName = 'goodshepherd_school';
 $databaseUser = 'root';
 $databasePassword = '';

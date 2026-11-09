@@ -89,7 +89,7 @@ if (!empty($staff['photo'])) {
     >
 
     <title>
-        Edit Staff | Good Shepherd Primary School
+        Edit Staff | Royal Kindergarten and Primary School
     </title>
 
     <link

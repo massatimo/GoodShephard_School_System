@@ -49,7 +49,7 @@ $recentPayments = $pdo->query(
     >
 
     <title>
-        Dashboard | Good Shepherd Primary School
+        Dashboard | Royal Kindergarten and Primary School
     </title>
 
     <link
@@ -81,7 +81,7 @@ $recentPayments = $pdo->query(
         <section class="welcome-banner">
             <div>
                 <span class="welcome-label">
-                    GOOD SHEPHERD PRIMARY SCHOOL
+                    ROYAL KINDERGARTEN AND PRIMARY SCHOOL
                 </span>
 
                 <h2>
@@ -104,6 +104,8 @@ $recentPayments = $pdo->query(
                 </div>
             </div>
         </section>
+
+        <?php require __DIR__ . '/../includes/school-information.php'; ?>
 
         <section class="row g-4 mt-1">
 

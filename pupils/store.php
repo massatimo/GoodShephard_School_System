@@ -179,7 +179,7 @@ if ($errors !== []) {
     exit;
 }
 $admissionPrefix = sprintf(
-    '%s/GS/%s/',
+    '%s/RKPS/%s/',
     date('y'),
     strtoupper((string) $classCode)
 );

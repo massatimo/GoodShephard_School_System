@@ -81,7 +81,7 @@ function examSelected(
     >
 
     <title>
-        Create Examination | Good Shepherd Primary School
+        Create Examination | Royal Kindergarten and Primary School
     </title>
 
     <link

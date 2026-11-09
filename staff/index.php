@@ -134,7 +134,7 @@ function staffFullName(array $staff): string
     >
 
     <title>
-        Staff Management | Good Shepherd Primary School
+        Staff Management | Royal Kindergarten and Primary School
     </title>
 
     <link

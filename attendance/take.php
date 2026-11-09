@@ -133,7 +133,7 @@ unset($_SESSION['form_errors']);
     >
 
     <title>
-        Take Attendance | Good Shepherd Primary School
+        Take Attendance | Royal Kindergarten and Primary School
     </title>
 
     <link

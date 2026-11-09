@@ -144,7 +144,7 @@ $fullName = trim(
     >
 
     <title>
-        Pupil Attendance Report | Good Shepherd Primary School
+        Pupil Attendance Report | Royal Kindergarten and Primary School
     </title>
 
     <link

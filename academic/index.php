@@ -78,7 +78,7 @@ unset($_SESSION['success_message'], $_SESSION['error_message']);
     >
 
     <title>
-        Academic Structure | Good Shepherd Primary School
+        Academic Structure | Royal Kindergarten and Primary School
     </title>
 
     <link

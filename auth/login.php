@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     >
 
     <title>
-        Staff Login | Good Shepherd Primary School
+        Staff Login | Royal Kindergarten and Primary School
     </title>
 
     <link
@@ -118,18 +118,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </span>
 
                 <h1>
-                    Good Shepherd
+                    Royal Kindergarten
                     <span>Primary School</span>
                 </h1>
 
                 <div class="school-title-line"></div>
+                <p>A place to learn, grow, and be inspired!</p>
 
                 <p class="school-motto-text">
-                    Excellence
-                    <span>•</span>
-                    Discipline
-                    <span>•</span>
-                    Integrity
+                    Effort Achieves
                 </p>
             </div>
 
@@ -142,7 +139,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3>Welcome Back!</h3>
 
                     <p>
-                        Sign in to access the School Management System.
+                        Dzaipi central village, Along Ayilo Rd<br>
+                        Tel: 0777446416 / 0777 974880
                     </p>
                 </div>
             </div>
@@ -163,8 +161,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="login-logo-wrapper">
                     <img
-                        src="../assets/images/logo.jpg"
-                        alt="Good Shepherd Primary School logo"
+                        src="../assets/images/royal-logo.jpg"
+                        alt="Royal Kindergarten and Primary School logo"
                         class="login-school-logo"
                         onerror="
                             this.style.display='none';
@@ -176,12 +174,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         class="login-logo-fallback"
                         id="logoFallback"
                     >
-                        GS
+                        RKPS
                     </div>
                 </div>
 
                 <h2>
-                    Good Shepherd
+                    Royal Kindergarten
                 </h2>
 
                 <h3>
@@ -309,7 +307,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <footer class="modern-login-footer">
             &copy; <?= date('Y') ?>
-            Good Shepherd Primary School. All rights reserved.
+            Royal Kindergarten and Primary School. All rights reserved.
         </footer>
 
     </section>

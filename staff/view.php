@@ -176,7 +176,7 @@ if (!empty($staff['photo'])) {
 
     <title>
         <?= htmlspecialchars($fullName) ?>
-        | Good Shepherd Primary School
+        | Royal Kindergarten and Primary School
     </title>
 
     <link

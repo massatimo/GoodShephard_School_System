@@ -230,7 +230,7 @@ $rows = $statement->fetchAll();
             border: 0;
             border-radius: 7px;
             color: #ffffff;
-            background: #0f6b3f;
+            background: #2d1772;
             text-decoration: none;
             cursor: pointer;
         }
@@ -250,7 +250,7 @@ $rows = $statement->fetchAll();
         .school-header {
             display: flex;
             align-items: center;
-            border-bottom: 3px solid #0f6b3f;
+            border-bottom: 3px solid #2d1772;
             padding-bottom: 12px;
         }
 
@@ -267,7 +267,7 @@ $rows = $statement->fetchAll();
 
         .school-heading h1 {
             margin: 0;
-            color: #0f5d38;
+            color: #211052;
             font-size: 23px;
             text-transform: uppercase;
         }
@@ -291,7 +291,7 @@ $rows = $statement->fetchAll();
         }
 
         .report-details th {
-            background: #f1f6f3;
+            background: #edf7fc;
         }
 
         .report-table {
@@ -309,7 +309,7 @@ $rows = $statement->fetchAll();
 
         .report-table th {
             color: #ffffff;
-            background: #173f68;
+            background: #211052;
         }
 
         .rate-good {
@@ -384,19 +384,19 @@ $rows = $statement->fetchAll();
     <header class="school-header">
 
         <img
-            src="../assets/images/logo.png"
+            src="../assets/images/royal-logo.jpg"
             alt="School logo"
             class="school-logo"
         >
 
         <div class="school-heading">
 
-            <h1>Good Shepherd Primary School</h1>
+            <h1>Royal Kindergarten and Primary School</h1>
 
             <h2>Class Attendance Summary Report</h2>
 
             <p>
-                Excellence • Discipline • Integrity
+                Effort Achieves</p><p>Dzaipi central village, Along Ayilo Rd<br>Tel: 0777446416 / 0777 974880
             </p>
 
         </div>

@@ -278,7 +278,7 @@ unset(
     >
 
     <title>
-        Enter Marks | Good Shepherd Primary School
+        Enter Marks | Royal Kindergarten and Primary School
     </title>
 
     <link

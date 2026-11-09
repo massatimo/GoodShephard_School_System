@@ -1,7 +1,7 @@
 <footer class="app-footer">
     <span>
         &copy; <?= date('Y') ?>
-        Good Shepherd Primary School
+        Royal Kindergarten and Primary School
     </span>
 
     <span>

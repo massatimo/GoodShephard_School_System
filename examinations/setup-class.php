@@ -253,7 +253,7 @@ function setupSubjectChecked(
     >
 
     <title>
-        Assign Examination Class | Good Shepherd Primary School
+        Assign Examination Class | Royal Kindergarten and Primary School
     </title>
 
     <link

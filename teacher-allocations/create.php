@@ -143,7 +143,7 @@ function teacherOptionName(array $teacher): string
     >
 
     <title>
-        New Teacher Allocation | Good Shepherd Primary School
+        New Teacher Allocation | Royal Kindergarten and Primary School
     </title>
 
     <link

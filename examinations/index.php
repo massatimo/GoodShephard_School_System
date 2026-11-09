@@ -221,7 +221,7 @@ function examinationDate(
     >
 
     <title>
-        Examinations | Good Shepherd Primary School
+        Examinations | Royal Kindergarten and Primary School
     </title>
 
     <link

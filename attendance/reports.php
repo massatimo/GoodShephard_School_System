@@ -411,7 +411,7 @@ function attendancePercentageClass(
     >
 
     <title>
-        Attendance Reports | Good Shepherd Primary School
+        Attendance Reports | Royal Kindergarten and Primary School
     </title>
 
     <link

@@ -46,7 +46,7 @@ function oldSelected(
     >
 
     <title>
-        Register Staff | Good Shepherd Primary School
+        Register Staff | Royal Kindergarten and Primary School
     </title>
 
     <link
@@ -166,7 +166,7 @@ function oldSelected(
                                 $old,
                                 'staff_number'
                             ) ?>"
-                            placeholder="Example: GS-T001"
+                            placeholder="Example: RKPS/S/001"
                             required
                         >
                     </div>

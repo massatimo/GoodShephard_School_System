@@ -82,7 +82,7 @@ unset($_SESSION['success_message']);
         content="width=device-width, initial-scale=1"
     >
 
-    <title>Pupils | Good Shepherd Primary School</title>
+    <title>Pupils | Royal Kindergarten and Primary School</title>
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"

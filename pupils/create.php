@@ -45,7 +45,7 @@ unset($_SESSION['form_errors'], $_SESSION['old_input']);
         content="width=device-width, initial-scale=1"
     >
 
-    <title>Register Pupil | Good Shepherd Primary School</title>
+    <title>Register Pupil | Royal Kindergarten and Primary School</title>
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"

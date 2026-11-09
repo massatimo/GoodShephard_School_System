@@ -123,7 +123,7 @@ if (!empty($pupil['photo'])) {
             border: 0;
             border-radius: 7px;
             color: #ffffff;
-            background: #0f6b3f;
+            background: #2d1772;
             font-size: 14px;
             text-decoration: none;
             cursor: pointer;
@@ -147,7 +147,7 @@ if (!empty($pupil['photo'])) {
             align-items: center;
             justify-content: space-between;
             padding-bottom: 15px;
-            border-bottom: 3px solid #0f6b3f;
+            border-bottom: 3px solid #2d1772;
         }
 
         .school-logo {
@@ -164,7 +164,7 @@ if (!empty($pupil['photo'])) {
 
         .school-heading h1 {
             margin: 0;
-            color: #0f5d38;
+            color: #211052;
             font-size: 25px;
             text-transform: uppercase;
         }
@@ -183,7 +183,7 @@ if (!empty($pupil['photo'])) {
         .photo-placeholder {
             width: 90px;
             height: 105px;
-            border: 2px solid #0f6b3f;
+            border: 2px solid #2d1772;
             border-radius: 5px;
         }
 
@@ -195,7 +195,7 @@ if (!empty($pupil['photo'])) {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #0f6b3f;
+            color: #2d1772;
             font-size: 35px;
         }
 
@@ -203,7 +203,7 @@ if (!empty($pupil['photo'])) {
             margin: 20px 0 15px;
             padding: 10px;
             color: #ffffff;
-            background: #0f6b3f;
+            background: #2d1772;
             text-align: center;
             font-size: 16px;
             text-transform: uppercase;
@@ -233,7 +233,7 @@ if (!empty($pupil['photo'])) {
         .summary-table th,
         .information-table th {
             width: 32%;
-            background: #f1f6f3;
+            background: #edf7fc;
             font-weight: bold;
         }
 
@@ -241,7 +241,7 @@ if (!empty($pupil['photo'])) {
             margin: 17px 0 0;
             padding: 8px 10px;
             color: #ffffff;
-            background: #173f68;
+            background: #211052;
             font-size: 13px;
             text-transform: uppercase;
         }
@@ -313,18 +313,18 @@ if (!empty($pupil['photo'])) {
     <header class="school-header">
 
         <img
-            src="../assets/images/logo.png"
+            src="../assets/images/royal-logo.jpg"
             alt="School logo"
             class="school-logo"
         >
 
         <div class="school-heading">
-            <h1>Good Shepherd Primary School</h1>
+            <h1>Royal Kindergarten and Primary School</h1>
 
             <h2>Pupil Registration Profile</h2>
 
             <p>
-                Excellence • Discipline • Integrity
+                Effort Achieves</p><p>Dzaipi central village, Along Ayilo Rd<br>Tel: 0777446416 / 0777 974880
             </p>
 
             <p>
@@ -587,7 +587,7 @@ if (!empty($pupil['photo'])) {
 
     <footer class="document-footer">
         Generated on <?= date('d M Y, h:i A') ?> through the
-        Good Shepherd Primary School Management System.
+        Royal Kindergarten and Primary School Management System.
     </footer>
 
 </main>

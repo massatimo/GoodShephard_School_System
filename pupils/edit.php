@@ -132,7 +132,7 @@ function editSelected(
     >
 
     <title>
-        Edit Pupil | Good Shepherd Primary School
+        Edit Pupil | Royal Kindergarten and Primary School
     </title>
 
     <link

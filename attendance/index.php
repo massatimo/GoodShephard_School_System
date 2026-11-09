@@ -210,7 +210,7 @@ unset(
     >
 
     <title>
-        Attendance | Good Shepherd Primary School
+        Attendance | Royal Kindergarten and Primary School
     </title>
 
     <link

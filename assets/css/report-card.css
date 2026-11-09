@@ -1,0 +1,493 @@
+:root {
+  --report-primary: #2d1772;
+  --report-dark: #211052;
+  --report-gold: #75c5e9;
+  --report-text: #1d2a35;
+  --report-muted: #66727e;
+  --report-border: #cfd7dc;
+  --report-soft: #edf7fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 28px;
+  color: var(--report-text);
+  background: #e9eef1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.print-toolbar {
+  max-width: 210mm;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 auto 18px;
+}
+
+.toolbar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 17px;
+  border: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toolbar-back {
+  color: #25323c;
+  background: #ffffff;
+}
+
+.toolbar-print {
+  color: #ffffff;
+  background: var(--report-primary);
+}
+
+.report-card-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 13mm 14mm;
+  background: #ffffff;
+  box-shadow: 0 12px 40px rgba(26, 39, 50, 0.13);
+}
+
+.report-school-header {
+  display: grid;
+  grid-template-columns: 95px 1fr 85px;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 3px solid var(--report-primary);
+}
+
+.report-logo {
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+}
+
+.report-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.report-school-identity {
+  text-align: center;
+}
+
+.report-school-identity h1 {
+  margin: 0;
+  color: var(--report-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.report-school-identity p {
+  margin: 4px 0 0;
+  color: var(--report-muted);
+  font-size: 11px;
+}
+
+.report-school-identity p span {
+  margin: 0 6px;
+}
+
+.report-school-identity strong {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--report-gold);
+  font-size: 10px;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.report-pupil-photo {
+  width: 78px;
+  height: 88px;
+  padding: 3px;
+  border: 1px solid var(--report-border);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.report-pupil-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.report-title-section {
+  margin: 13px 0;
+  padding: 10px 15px;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--report-dark),
+    var(--report-primary)
+  );
+}
+
+.report-title-section span {
+  display: block;
+  color: #75c5e9;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.report-title-section h2 {
+  margin: 3px 0;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.report-title-section p {
+  margin: 0;
+  font-size: 10px;
+}
+
+.report-information-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 13px;
+}
+
+.report-information-grid > div {
+  min-height: 48px;
+  padding: 8px 10px;
+  border: 1px solid var(--report-border);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.report-information-grid small,
+.report-summary-grid small,
+.report-attendance-grid small,
+.report-promotion-section small {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--report-muted);
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.report-information-grid strong {
+  color: var(--report-text);
+  font-size: 10px;
+}
+
+.report-section {
+  margin-top: 12px;
+}
+
+.report-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-left: 4px solid var(--report-primary);
+  background: var(--report-soft);
+}
+
+.report-section-heading h3 {
+  margin: 0;
+  color: var(--report-dark);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.report-section-heading span {
+  color: var(--report-muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.report-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9px;
+}
+
+.report-results-table th,
+.report-results-table td {
+  padding: 6px 6px;
+  border: 1px solid var(--report-border);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.report-results-table thead th {
+  color: #ffffff;
+  background: var(--report-dark);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.report-results-table tbody tr:nth-child(even) {
+  background: #f8faf9;
+}
+
+.report-results-table tfoot th {
+  color: var(--report-dark);
+  background: #e8f6fc;
+  font-size: 9px;
+}
+
+.subject-name-cell,
+.remark-cell {
+  text-align: left !important;
+}
+
+.subject-name-cell strong {
+  display: block;
+  font-size: 9px;
+}
+
+.subject-name-cell small {
+  color: var(--report-muted);
+  font-size: 7px;
+}
+
+.report-absent {
+  display: inline-block;
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: #9b3333;
+  background: #fee7e7;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.report-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 11px;
+}
+
+.report-summary-grid article {
+  padding: 9px 10px;
+  border: 1px solid var(--report-border);
+  border-radius: 6px;
+  text-align: center;
+  background: var(--report-soft);
+}
+
+.report-summary-grid strong {
+  color: var(--report-primary);
+  font-size: 12px;
+}
+
+.report-attendance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--report-border);
+  border-top: 0;
+}
+
+.report-attendance-grid > div {
+  padding: 9px;
+  border-right: 1px solid var(--report-border);
+  text-align: center;
+}
+
+.report-attendance-grid > div:last-child {
+  border-right: 0;
+}
+
+.report-attendance-grid strong {
+  color: var(--report-dark);
+  font-size: 12px;
+}
+
+.report-comments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.report-comments-grid article {
+  min-height: 112px;
+  position: relative;
+  padding: 10px;
+  border: 1px solid var(--report-border);
+  border-radius: 6px;
+}
+
+.comment-heading {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--report-border);
+  color: var(--report-primary);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.report-comments-grid p {
+  min-height: 45px;
+  margin: 8px 0 16px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.signature-line {
+  width: 65%;
+  padding-top: 4px;
+  border-top: 1px solid #59636c;
+  color: var(--report-muted);
+  font-size: 7px;
+}
+
+.report-promotion-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 120px;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid var(--report-primary);
+  border-radius: 6px;
+  background: #edf7fc;
+}
+
+.report-promotion-section > div {
+  padding: 7px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.report-promotion-section strong {
+  color: var(--report-dark);
+  font-size: 9px;
+}
+
+.report-stamp-space {
+  min-height: 65px;
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--report-primary);
+  text-align: center;
+}
+
+.report-stamp-space span {
+  color: var(--report-muted);
+  font-size: 8px;
+}
+
+.report-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  padding-top: 7px;
+  border-top: 1px solid var(--report-border);
+  color: var(--report-muted);
+  font-size: 7px;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 7mm;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .print-toolbar {
+    display: none !important;
+  }
+
+  .report-card-page {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 5mm 6mm;
+    box-shadow: none;
+  }
+
+  .report-school-header {
+    grid-template-columns: 80px 1fr 72px;
+  }
+
+  .report-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .report-pupil-photo {
+    width: 68px;
+    height: 77px;
+  }
+
+  .report-school-identity h1 {
+    font-size: 23px;
+  }
+
+  .report-results-table {
+    page-break-inside: avoid;
+  }
+
+  .report-comments-grid,
+  .report-promotion-section {
+    page-break-inside: avoid;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 12px;
+  }
+
+  .report-card-page {
+    width: 100%;
+    min-height: auto;
+    padding: 18px;
+    overflow-x: auto;
+  }
+
+  .report-information-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .report-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .report-promotion-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -135,7 +135,7 @@ $allowedStatuses = [
     >
 
     <title>
-        Edit Attendance | Good Shepherd Primary School
+        Edit Attendance | Royal Kindergarten and Primary School
     </title>
 
     <link

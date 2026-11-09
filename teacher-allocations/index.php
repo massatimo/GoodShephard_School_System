@@ -156,7 +156,7 @@ function allocationTeacherName(array $allocation): string
     >
 
     <title>
-        Teacher Allocation | Good Shepherd Primary School
+        Teacher Allocation | Royal Kindergarten and Primary School
     </title>
 
     <link

@@ -10,10 +10,25 @@ function sidebarActive(string $page, string $currentPage): string
 
 <aside class="app-sidebar" id="appSidebar">
     <div class="sidebar-brand">
-        <div class="brand-logo">GS</div>
+        <div class="brand-logo">
+            <img
+                src="../assets/images/royal-logo.jpg"
+                alt="Royal Kindergarten and Primary School logo"
+                width="39"
+                height="39"
+                style="
+                    display: block;
+                    width: 39px;
+                    height: 39px;
+                    max-width: 39px;
+                    max-height: 39px;
+                    object-fit: contain;
+                "
+            >
+        </div>
 
         <div class="brand-text">
-            <strong>Good Shepherd</strong>
+            <strong>Royal Kindergarten</strong>
             <span>Primary School</span>
         </div>
     </div>
@@ -94,10 +109,13 @@ function sidebarActive(string $page, string $currentPage): string
             FINANCE
         </div>
 
-        <a href="#" class="sidebar-link">
-            <i class="bi bi-wallet2"></i>
-            <span>Fees & Payments</span>
-        </a>
+        <a
+    href="../finance/index.php"
+    class="sidebar-link"
+>
+    <i class="bi bi-cash-stack"></i>
+    <span>Fees and Finance</span>
+</a>
 
         <a href="#" class="sidebar-link">
             <i class="bi bi-receipt-cutoff"></i>
